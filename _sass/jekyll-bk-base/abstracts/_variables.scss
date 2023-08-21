@@ -1,0 +1,42 @@
+$color-dark: #0c0c0c;
+$color-dark__light: lighten($color-dark, 25%);
+$color-dark__superlight: lighten($color-dark, 35%);
+$color-dark__extralight: lighten($color-dark, 50%);
+
+$color-light: #f7e6d7;
+
+$color-primaire: #230e00;
+$color-primaire__light: lighten($color-primaire, 10%);
+$color-primaire__superlight: lighten($color-primaire, 20%);
+$color-primaire__extralight: lighten($color-primaire, 30%);
+
+$color-secondaire: #dab082;
+$color-secondaire__light: lighten($color-secondaire, 10%);
+$color-secondaire__superlight: lighten($color-secondaire, 20%);
+$color-secondaire__extralight: lighten($color-secondaire, 30%);
+
+$color-bckgd: $color-secondaire;
+$color-bckgd__light: lighten($color-bckgd, 10%);
+$color-bckgd__superlight: lighten($color-bckgd, 15px);
+$color-bckgd__extralight: lighten($color-bckgd, 25%);
+
+$color-link: #9f5101;
+$color-hover: #d16c03;
+
+$color-link__light: $color-link;
+$color-hover__light: #d16c03;
+
+$color-border: rgba(0, 0, 0, 0.35);
+
+$font-main: "Bricolage-v", "BricolageGrotesque", "tahoma", "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    "Helvetica Neue", sans-serif;
+$font-title-a: "Bricolage-v", "BricolageGrotesque", "tahoma", "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    "Helvetica Neue", sans-serif;
+$font-title-b: "Bricolage-v", "BricolageGrotesque", "tahoma", "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    "Helvetica Neue", sans-serif;
+
+$font-code: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New",
+    monospace;
+
+$color-font-main: $color-primaire;
+$color-font-title: $color-primaire;

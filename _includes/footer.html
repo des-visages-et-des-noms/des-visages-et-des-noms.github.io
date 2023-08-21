@@ -1,0 +1,74 @@
+<footer class="site-footer">
+  <div class="site-footer-bckgd"></div>
+  <div class="site-footer__c">
+    <div class="footer-main max--xxm-p">
+      <div class="footer-header">
+        <div class="site-id">
+          <a class="site-title" rel="author" href="{{ '/' | relative_url }}">
+            {{ site.title }}
+          </a>
+          <div class="site-description" itemprop="description">{{ site.description }}</div>
+        </div>
+
+        <div class="footer-cnrd">
+          <div class="footer-cnrd__mention">{{ "Participant CNRD 2019 : " }}</div>
+          {% for li in site.data.config.footer-cnrd %}
+          <a href="{{ li.link }}">
+            <img src="{{ li.image }}" alt="{{ li.name }}">
+          </a>
+          {% endfor %}
+        </div>
+
+      </div>
+
+      <div class="footer-navigation-soutiens">
+
+        <nav class="footer-navigation">
+          <ul class="menu">
+            {% for item in site.data.navigation.footer %}
+            {%- if item.title -%}
+            <li class="menu-link">
+              <a class="light" href="{{ item.url| relative_url }}" itemprop="url">
+                <span itemprop="name">{{ item.title | escape }}</span>
+              </a>
+            </li>
+            {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </nav>
+  
+        <div class="footer-soutiens">
+          <ul class="footer-soutiens__c">
+            <li class="footer-soutiens__mention">{{ "Ce projet a obtenu le soutien de :" }}</li>
+            {% for li in site.data.config.footer-soutiens %}
+            <li>
+              <a href="{{ li.link }}">
+                <img src="{{ li.image }}" alt="{{ li.name }}">
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer-infos">
+      <div class="footer-infos__c max--xxm-p">
+        <div class="footer-infos__part-I">
+          {{ site.name | default: site.title }}
+          &copy; {{ site.time | date: '%Y' }}
+        </div>
+        <div class="footer-infos__part-II">
+          {{ "-" }}
+          {{ "Construit avec" }}
+          <a class="light" href="{{ 'https://jekyllrb.com' }}" itemprop="url">{{ "Jekyll" }}</a>
+          {{ "Par" }}
+          <a class="light" href="{{ 'https://www.bertrand-kaernel.fr' }}" itemprop="url">{{ "BKaernel" }} </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>

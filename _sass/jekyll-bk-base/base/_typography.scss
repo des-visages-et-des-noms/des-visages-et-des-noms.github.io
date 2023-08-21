@@ -1,0 +1,55 @@
+h1,
+h2,
+h3,
+h4 {
+    font-family: $font-title-a;
+    font-style: normal;
+    line-height: 1.2;
+    color: $color-font-title;
+    @include font-weight(700);
+    &:first-letter{
+        text-transform: uppercase;
+    }
+    font-variation-settings: "wght" 100;
+    font-stretch: 77%;
+    font-optical-sizing: auto;
+}
+
+.h1,
+h1 {
+    margin: 2rem 0px;
+    @include fontSize(h1);
+    @include font-weight(700);
+    font-family: $font-title-b;
+}
+
+.h2,
+h2 {
+    margin: 1.5rem 0px;
+    @include fontSize(h2);
+    @include font-weight(500);
+}
+
+.h3,
+h3 {
+    @include fontSize(h3);
+    margin: 0.75rem 0px 0.75rem;
+}
+
+.h4,
+h4 {
+    @include fontSize(h4);
+    margin: 0.75rem 0px;
+}
+
+.h5,
+h5 {
+    @include fontSize(h5);
+    margin: 0.75rem 0px;
+}
+
+.h6,
+h6 {
+    @include fontSize(h6);
+    margin: 0.75rem 0px;
+}

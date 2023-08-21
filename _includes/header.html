@@ -1,0 +1,41 @@
+<header class="site-header">
+    <div class="site-header__c max--xxm-p">
+
+        <div class="site-header-top">
+            <a class="site-title" rel="author" href="{{ '/' | relative_url }}">
+                <svg viewBox="0 0 1000 120" width="100%" height="100%">
+                    <text x="-5" y="110">{{ site.title | capitalize }}</text>
+                </svg>
+            </a>
+            <div class="site-description" itemprop="description">{{ site.description }}</div>
+        </div>
+
+        <nav class="main-navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"
+            aria-label="Main navigation">
+
+            <input type="checkbox" class="menu-toggler" aria-label="menu">
+
+            <div class="menu-icone">
+                <div></div>
+            </div>
+            <div class="menu">
+                <ul class="menu__c">
+                    {%- assign menu_main = site.data.navigation.main -%}
+                    {%- for item in menu_main -%}
+                    {%- if item.title -%}
+                    {%- assign cat_active = item.cat_active -%}
+                    <li
+                        class="menu-link {% if page.url == item.url or page.url contains cat_active %} active {% endif %}">
+                        <a class="light" href="{{ site.baseurl }}{{ item.url }}" itemprop="url">
+                            <span itemprop="name">{{ item.title }}</span>
+                        </a>
+                    </li>
+                    {%- endif -%}
+                    {%- endfor-%}
+                </ul>
+            </div>
+        </nav>
+        <div class="site-header-bckgd"></div>
+    </div>
+
+</header>

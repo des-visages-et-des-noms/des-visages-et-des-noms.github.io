@@ -1,0 +1,266 @@
+// ----------------------------------------------------------------------------
+// -------------------------------------------------------------------- FLEXBOX
+// ----------------------------------------------------------------------------
+
+@mixin flexBox($direction: row, $justify-content: flex-start, $align-items: flex-start) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: wrap;
+}
+
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------- BREAKPOINT
+// ----------------------------------------------------------------------------
+
+@mixin breakpoint($point) {
+    @if $point == min_xxl {
+        @media (min-width: 1920px) {
+            @content;
+        }
+    } @else if $point == min_xl {
+        @media (min-width: 1601px) {
+            @content;
+        }
+    } @else if $point == min_lg {
+        @media (min-width: 1441px) {
+            @content;
+        }
+    } @else if $point == min_xxm {
+        @media (min-width: 1281px) {
+            @content;
+        }
+    } @else if $point == min_xm {
+        @media (min-width: 1025px) {
+            @content;
+        }
+    } @else if $point == min_md {
+        @media (min-width: 769px) {
+            @content;
+        }
+    } @else if $point == min_xs {
+        @media (min-width: 426px) {
+            @content;
+        }
+    } @else if $point == min_sm {
+        @media (min-width: 321px) {
+            @content;
+        }
+    } @else if $point == max_xxl {
+        @media (max-width: 1920px) {
+            @content;
+        }
+    } @else if $point == max_xl {
+        @media (max-width: 1600px) {
+            @content;
+        }
+    } @else if $point == max_lg {
+        @media (max-width: 1440px) {
+            @content;
+        }
+    } @else if $point == max_xxm {
+        @media (max-width: 1280px) {
+            @content;
+        }
+    } @else if $point == max_xm {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    } @else if $point == max_md {
+        @media (max-width: 768px) {
+            @content;
+        }
+    } @else if $point == max_xs {
+        @media (max-width: 425px) {
+            @content;
+        }
+    } @else if $point == max_sm {
+        @media (max-width: 320px) {
+            @content;
+        }
+    }
+}
+
+// ----------------------------------------------------------------------------
+// -------------------------------------------------------------- CONTENT-WIDTH
+// ----------------------------------------------------------------------------
+
+$screen-sizes: (
+    "xxl": 1920px,
+    "xl": 1600px,
+    "lg": 1440px,
+    "xxm": 1280px,
+    "xm": 1024px,
+    "md": 768px,
+    "xs": 425px,
+    "sm": 320px,
+);
+
+@each $size, $screen-size in $screen-sizes {
+    .max--#{$size} {
+        max-width: $screen-size;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+    .max--#{$size}-p {
+        max-width: $screen-size;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        box-sizing: border-box;
+        @include breakpoint(max_xxm) {
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+        @include breakpoint(max_xs) {
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+        }
+    }
+}
+
+// ----------------------------------------------------------------------------
+// --------------------------------- FONT-WEIGHT for font statique and variable
+// ----------------------------------------------------------------------------
+
+@mixin font-weight($font-weight: 400) {
+    font-weight: $font-weight;
+    @supports (font-variation-settings: inherit) {
+        font-variation-settings: "wght" $font-weight;
+    }
+}
+
+// ----------------------------------------------------------------------------
+// ---------------------------------------------------------- POSITION ABSOLUTE
+// ----------------------------------------------------------------------------
+
+@mixin posAbs($ab-t: 0px, $ab-l: 0px, $ab-w: 100%, $ab-h: 100%) {
+    position: absolute;
+    top: $ab-t;
+    left: $ab-l;
+    min-width: $ab-w;
+    min-height: $ab-h;
+}
+
+// ----------------------------------------------------------------------------
+// ------------------------------------------------------------------ FONT_SIZE
+// ----------------------------------------------------------------------------
+
+@mixin size-of-font($font-size: 16px, $ratio: 2, $exponent: 1){
+    font-size: $font-size * ( pow( $ratio, $exponent ));
+}
+@mixin fontSize($size) {
+    $font-size: 19.5px;
+    @include breakpoint(min_xxm) {
+        $ratio-large: 1.17;
+        @if $size == h1 {
+            $exponent: 8;
+            @include size-of-font($font-size, $ratio-large, $exponent);
+        } @else if $size == h2 {
+            $exponent: 4;
+            @include size-of-font($font-size, $ratio-large, $exponent);
+        } @else if $size == h3 {
+            $exponent: 3;
+            @include size-of-font($font-size, $ratio-large, $exponent);
+        } @else if $size == h4 {
+            $exponent: 2;
+            @include size-of-font($font-size, $ratio-large, $exponent);
+        } @else if $size == h5 {
+            $exponent: 1;
+            @include size-of-font($font-size, $ratio-large, $exponent);
+        } @else if $size == h6 {
+            $exponent: 1;
+            @include size-of-font($font-size, $ratio-large, $exponent);
+        } @else if $size == lg {
+            $exponent: 8;
+            @include size-of-font($font-size, $ratio-large, $exponent);
+        } @else if $size == xlg {
+            $exponent: 9;
+            @include size-of-font($font-size, $ratio-large, $exponent);
+        }
+    }
+    @include breakpoint(max_xxm) {
+        $ratio-medium: 1.13;
+        @if $size == h1 {
+            $exponent: 7;
+            @include size-of-font($font-size, $ratio-medium, $exponent);
+        } @else if $size == h2 {
+            $exponent: 4;
+            @include size-of-font($font-size, $ratio-medium, $exponent);
+        } @else if $size == h3 {
+            $exponent: 3;
+            @include size-of-font($font-size, $ratio-medium, $exponent);
+        } @else if $size == h4 {
+            $exponent: 2;
+            @include size-of-font($font-size, $ratio-medium, $exponent);
+        } @else if $size == h5 {
+            $exponent: 1;
+            @include size-of-font($font-size, $ratio-medium, $exponent);
+        } @else if $size == h6 {
+            $exponent: 1;
+            @include size-of-font($font-size, $ratio-medium, $exponent);
+        } @else if $size == lg {
+            $exponent: 8;
+            @include size-of-font($font-size, $ratio-medium, $exponent);
+        } @else if $size == xlg {
+            $exponent: 9;
+            @include size-of-font($font-size, $ratio-medium, $exponent);
+        }
+    }
+    @include breakpoint(max_xs) {
+        $ratio-small: 1.1;
+        @if $size == h1 {
+            $exponent: 7;
+            @include size-of-font($font-size, $ratio-small, $exponent);
+        } @else if $size == h2 {
+            $exponent: 4;
+            @include size-of-font($font-size, $ratio-small, $exponent);
+        } @else if $size == h3 {
+            $exponent: 3;
+            @include size-of-font($font-size, $ratio-small, $exponent);
+        } @else if $size == h4 {
+            $exponent: 2;
+            @include size-of-font($font-size, $ratio-small, $exponent);
+        } @else if $size == h5 {
+            $exponent: 1;
+            @include size-of-font($font-size, $ratio-small, $exponent);
+        } @else if $size == h6 {
+            $exponent: 1;
+            @include size-of-font($font-size, $ratio-small, $exponent);
+        } @else if $size == lg {
+            $exponent: 7;
+            @include size-of-font($font-size, $ratio-small, $exponent);
+        } @else if $size == xlg {
+            $exponent: 8;
+            @include size-of-font($font-size, $ratio-small, $exponent);
+        }
+    }
+}
+
+// ----------------------------------------------------------------------------
+// ----------------------------------------------- ASPECT RATIO FOR OLD BROWSER
+// ----------------------------------------------------------------------------
+
+@mixin aspect_ratio($width: 4, $height: 3) {
+    
+    $ratio: #{$width}/#{$height};
+    aspect-ratio: $ratio;
+
+    @supports not (aspect-ratio: $ratio) {
+        &::before {
+            content: '';
+            float: left;
+            padding-top: calc((#{$height} / #{$width}) * 100%);
+        }
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<nav class="post-navigation max--xxm-p">
+
+    {% if page.previous %}
+    {% assign page_previous = page.previous.url %}
+    <div class="nav previous">
+        <div class="nav-label">{{ '| Article précédent' }}</div>
+        <a href="{{ page_previous | relative_url }}" aria-label="Article précédent">{{ page.previous.title }}</a>
+    </div>
+    {% endif %}
+
+    {% if page.next %}
+    {% assign page_next = page.next.url %}
+    <div class="nav next">
+        <div class="nav-label">{{ 'Article suivant |' }}</div>
+        <a href="{{ page_next | relative_url }}" aria-label="Article suivant">{{ page.next.title}}</a>
+    </div>
+
+    {% endif %}
+
+</nav>

@@ -1,0 +1,127 @@
+.page {
+    padding-top: 6rem;
+    padding-bottom: 10rem;
+    overflow-x: hidden;
+    @include breakpoint(max_xm) {
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+    }
+    @include breakpoint(max_xs) {
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+    }
+    &-header {
+        .page-title {
+            margin-top: 0px;
+        }
+    }
+    &-content {
+        text-align: justify;
+        h2 {
+            margin: 2.5rem 0px;
+            text-align: left;
+            @include breakpoint(max_xm) {
+                margin: 2rem 0px;
+            }
+            @include breakpoint(max_xs) {
+                margin: 1.5rem 0px;
+            }
+        }
+        h3 {
+            margin: 1.5rem 0px;
+            text-align: left;
+            @include breakpoint(max_xs) {
+                margin: 1rem 0px;
+            }
+        }
+    }
+
+    .list-content-familles {
+        margin-top: 6rem;
+        margin-left: 0px;
+        display: grid;
+        grid-gap: 20px 20px;
+        grid-template-columns: repeat(2, 1fr);
+        @include breakpoint(max_md) {
+            grid-template-columns: 1fr;
+        }
+
+        .list-li {
+            position: relative;
+            list-style: none;
+            background: $color-bckgd;
+            border-radius: 5px;
+            &__title {
+                padding: 30px 20px;
+                margin: 0px;
+            }
+            &__members {
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                a.icone {
+                    width: 32px;
+                    height: 32px;
+                    font-size: smaller;
+                    text-transform: uppercase;
+                    text-align: center;
+                    line-height: 32px;
+                    background-color: $color-primaire;
+                    color: $color-secondaire__superlight;
+
+                }
+            }
+            &:hover {
+                background: $color-bckgd;
+                .list-li__title {
+                    color: $color-hover;
+                    transition: all 0.1s ease-in;
+                }
+                .list-li__members {
+                    a.icone {
+                        transition: all 0.1s ease-in;
+                        &:hover {
+                            background: $color-hover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .list-content-members {
+        list-style: none;
+        margin-left: 0px;
+        .list-li-member{
+            text-align: justify;
+        }
+        .member-title {
+            position: relative;
+            &::before {
+                content: attr(data-title);
+                position: absolute;
+                width: 32px;
+                height: 32px;
+                border-radius: 100%;
+                left: -45px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 16.5px;
+                @include font-weight(400);
+                font-stretch: semi-condensed;
+                font-optical-sizing: auto;
+                text-transform: uppercase;
+                text-align: center;
+                line-height: 34px;
+                background-color: $color-primaire;
+                color: $color-light;
+            }
+            @include breakpoint(max_xxm) {
+                left: 3rem;
+                &::before {
+                    left: -3rem;
+                }
+            }
+        }
+    }
+}

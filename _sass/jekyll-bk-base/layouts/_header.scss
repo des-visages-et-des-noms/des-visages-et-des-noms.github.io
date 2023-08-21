@@ -1,0 +1,98 @@
+.site-header {
+    background: $color-primaire;
+    @include breakpoint(min_xm) {
+        min-height: 290px;
+        top: -290px;
+    }
+    @include breakpoint(max_xm) {
+        min-height: 80px;
+        top: -80px;
+    }
+    @include breakpoint(max_xs) {
+        min-height: 70px;
+        top: -70px;
+    }
+    &.sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 33;
+    }
+    &__c {
+        position: relative;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        @include breakpoint(max_xm) {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+        @include breakpoint(max_xs) {
+            padding-top: 1.25rem;
+            padding-bottom: 1.25rem;
+        }
+    }
+    &-top {
+        .site-title {
+            display: block;
+            color: $color-secondaire__light;
+            text-transform: uppercase;
+            @include font-weight(300);
+            font-stretch: 75%;
+            font-optical-sizing: auto;
+            line-height: 1;
+            svg {
+                fill: $color-secondaire__light;
+                text {
+                    font-size: 7.73em;
+                    line-height: 1;
+                }
+            }
+            &:hover {
+                svg {
+                    fill: $color-hover;
+                }
+            }
+        }
+        .site-description {
+            position: relative;
+            color: $color-secondaire__light;
+            text-align: left;
+            margin-top: 1rem;
+            @include breakpoint(max_xs) {
+                margin-top: 10px; 
+                font-size: smaller;
+            }
+        }
+    }
+    &-bckgd {
+        position: absolute;
+        left: 0px;
+        top: 97%;
+        z-index: 0;
+        width: 100%;
+        @include aspect_ratio(100, 4.75);
+        min-height: 20px;
+        background-image: url("/assets/ressources/background-raffle-header.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: rotate(180deg);
+    }
+}
+.main-navigation {
+    @include breakpoint(min_xm) {
+        ul.menu__c {
+            list-style: none;
+            @include flexBox(row, flex-end, flex-end);
+            margin: 0px;
+            padding: 0px;
+            li {
+                margin-left: 15px;
+                font-size: x-large;
+                @include font-weight(500);
+                &.active a {
+                    color: $color-hover;
+                }
+            }
+        }
+    }
+}

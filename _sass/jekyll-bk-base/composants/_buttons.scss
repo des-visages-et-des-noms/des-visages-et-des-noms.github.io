@@ -1,0 +1,27 @@
+[type="button"],
+[type="submit"] {
+    display: inline-block;
+    width: auto;
+    height: 33px;
+    min-width: 33px;
+    color: $color-light;
+    text-transform: uppercase;
+    font-size: small;
+    @include font-weight(600);
+    background: $color-primaire;
+    border: 0px;
+    border-radius: 5px;
+    padding: 0px 10px;
+    &:hover {
+        background: $color-hover;
+        cursor: pointer;
+    }
+    &[value]{
+    }
+}
+
+input {
+    position: relative;
+    height: 33px;
+    box-sizing: border-box;
+}

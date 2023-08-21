@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header max--xm-p">
+    {% assign categories = page.categories | last %}
+    {% for category in categories %}
+    {% assign category_url = category | slugify | append: '.html' | absolute_url %}
+    <a class="navigation" href="{{ category_url | relative_url }}" aria-label="categorie {{ category }}">
+        {{ "<" }}
+    {% endfor %}
+    </a>
+
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title }}</h1>
+    {% include post/post-metas.html %}
+  </header>
+
+
+  <div class="post-thumbnail max--xxm">
+    {% assign cover_src = page.cover_url | remove: ".jpg" | remove: ".jpeg" | remove: ".tiff" | remove: ".png" %}
+    {% assign cover_src = cover_src | prepend: "/assets/images/" %}
+    {% assign cover_alt = page.cover_alt %}
+    {% if page.cover_url %}
+    <picture>
+      <source media="(max-width:425px)" srcset="{{cover_src | relative_url}}-425.jpg">
+      <source media="(max-width:768px)" srcset="{{cover_src | relative_url}}-768.jpg">
+      <source media="(min-width:1281px)" srcset="{{cover_src | relative_url}}-1280.jpg">
+      <img src="{{cover_src | relative_url}}-1600.jpg" alt="{{cover_alt}}">
+    </picture>
+    {% else %}
+    <figure>
+      <img src="https://picsum.photos/seed/picsum/1280/720/" alt="image-picsum" width="1280" height="720">
+    </figure>
+    {% endif %}
+  </div>
+
+  <div class="post-content max--xm-p" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer max--xm-p">
+    <div class="post-tags">
+      {% for tag in page.tags %}
+      {% assign tag_url = '/tags#' %}
+      <a href="{{ site.url }}/{{ tag | slugify | prepend: tag_url }}" class="tag">{{tag}}</a>
+      {% endfor %}
+    </div>
+
+    {% include post/partage.html %}
+
+  </footer>
+
+  {% include post/post-navigation.html %}
+
+</article>

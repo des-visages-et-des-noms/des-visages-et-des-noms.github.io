@@ -1,0 +1,61 @@
+{% for c in site.familles %}
+{% if c.title == page.title %}
+{% assign thisPost = c %}
+{% if forloop.index == 1 %}
+{% assign prevflag = 0 %}
+{% assign nextflag = 1 %}
+{% elsif forloop.index == forloop.length %}
+{% assign prevflag = 1 %}
+{% assign nextflag = 0 %}
+{% else %}
+{% assign prevflag = 1 %}
+{% assign nextflag = 1 %}
+{% endif %}
+{% endif %}
+{% endfor %}
+
+{% for c in site.familles %}
+{% if c.title == page.title %}
+{% assign prevflag = 0 %}
+{% endif %}
+{% if prevflag == 1 %}
+{% assign prevPost = c %}
+{% assign page.previous = c %}
+{% endif %}
+{% endfor %}
+
+{% if nextflag == 1 %}
+{% for c in site.familles %}
+{% if foundPost == 1 %}
+{% assign getNext = 1 %}
+{% endif %}
+{% if c.title == page.title %}
+{% assign foundPost = 1 %}
+{% endif %}
+{% if getNext == 1%}
+{% assign nextPost = c %}
+{% assign page.next = c %}
+{% assign foundPost = 0 %}
+{% assign getNext = 0 %}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+<nav class="post-navigation max--xxm-p">
+
+    {% if prevPost.url %}
+    <div class="nav previous">
+        <div class="nav-label">{{ '| Article précédent' }}</div>
+        <a href="{{ prevPost.url }}" aria-label="Article précédent">{{ prevPost.title }}</a>
+    </div>
+    {% endif %}
+
+    {% if nextPost.url %}
+    <div class="nav next">
+        <div class="nav-label">{{ 'Article suivant |' }}</div>
+        <a href="{{ nextPost.url }}" aria-label="Article suivant">{{ nextPost.title }}</a>
+    </div>
+
+    {% endif %}
+
+</nav>

@@ -1,0 +1,20 @@
+<li class="list-li">
+    <h2 class="list-li__title">
+        <a href="{{ famille.permalink }}" rel="bookmark">
+            {{ famille.title }} {{ current_fam }}
+        </a>
+    </h2>
+
+    <!-- MEMBERS -->
+    {% assign FC = famille.categories | first %}
+    {% assign members = site.members | where_exp: "member", "member.famille == FC" %}
+    <div class="list-li__members">
+        {% for member in members limit:8 %}
+        <a class="icone" href="/{{ member.famille }}#{{ member.title | slugify }}" title="{{ member.title }}"
+            rel="bookmark">
+            {{ member.title | split: " " | first | truncate: 2, "" }}
+        </a>
+        {% endfor %}
+    </div>
+
+</li>

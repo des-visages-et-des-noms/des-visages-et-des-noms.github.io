@@ -1,0 +1,32 @@
+table {
+    display: table;
+    min-width: 100%;
+    border: 1px solid $color-border;
+
+    tr {
+        th,
+        td {
+            padding: 1.5rem 1rem;
+            border-left: 1px solid $color-border;
+            border-bottom: 1px solid $color-border;
+            &:first-child {
+                border-left: 0px;
+            }
+        }
+        &:last-child{
+            th,
+            td {
+                border-bottom: 0px solid $color-border;
+            }
+        }
+    }
+    thead{
+        tr th{
+            @include font-weight(700);
+            text-align: left;
+        }
+        tr:last-child th{
+            border-bottom: 1px solid $color-border;
+        }
+    }
+}

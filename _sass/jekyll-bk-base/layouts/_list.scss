@@ -1,0 +1,84 @@
+.list {
+    &__c {
+        padding-top: 5rem;
+        padding-bottom: 7rem;
+        @include breakpoint(max_xs) {
+            padding-top: 3rem;
+            padding-bottom: 5rem;
+        }
+    }
+    &-header {
+        @include flexBox(row, space-between, center);
+        padding-bottom: 3rem;
+        .list-title {
+            margin: 0px;
+            line-height: 1;
+        }
+        @include breakpoint(max_xm) {
+            .list-title { 
+            }
+        }
+        @include breakpoint(max_xs) {
+            padding-bottom: 1.5rem;
+            .list-title {
+            }
+        }
+        .list-filter {
+            @include breakpoint(max_xs) {
+                margin: 1rem 0px;
+            }
+            label {
+                margin-left: 5px;
+            }
+        }
+    }
+    &-content {
+        margin: 0px;
+
+        .list-li {
+            display: grid;
+            grid-template-columns: 1.5fr 3fr;
+            list-style: none;
+            background: $color-bckgd;
+            margin-bottom: 1.5rem;
+            border-radius: 5px;
+            @include breakpoint(max_xs){
+                grid-template-columns: 1fr;
+            }
+            &__cover {
+                figure{
+                    margin: 0px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    @include breakpoint(min_xs){
+                        @include aspect_ratio(4, 3);
+                        background-image: var(--cov-768);
+                    }
+                    @include breakpoint(max_md){
+                        @include aspect_ratio(1, 1);
+                        background-image: var(--cov-425);
+                    }
+                }
+            }
+            &__content {
+                padding: 2rem 1.5rem;
+                @include breakpoint(max_md){
+                    padding: 1.5rem 1.5rem;
+                }
+                @include breakpoint(max_xs){
+                    padding: 1rem 1.25rem;
+                }
+            }
+            &__title {
+                font-family: $font-title-b;
+                margin: 0px 0px 1rem;
+            }
+            .post-metas {
+                margin: 0px 0px 30px;
+                font-size: smaller;
+                opacity: 0.35;
+                @include font-weight(500);
+            }
+        }
+    }
+}

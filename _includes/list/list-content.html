@@ -1,0 +1,35 @@
+<li class="list-li" data-time='{{ page.date | date: "%Y%m%d" }}'>
+
+  <div class="list-li__cover">
+    {% assign cover_src = page.cover_url | remove: ".jpg" | remove: ".jpeg" | remove: ".tiff" | remove: ".png" %}
+    {% assign cover_src = cover_src | prepend: "/assets/images/" %}
+    {% assign cover_alt = page.cover_alt %}
+    {% if page.cover_url %}
+    <figure style="
+        --cov-425: url('{{cover_src}}-425.jpg');
+        --cov-768: url('{{cover_src}}-768.jpg');
+        ">
+    </figure>
+    {% endif %}
+  </div>
+
+  <div class="list-li__content">
+
+    <h2 class="list-li__title">
+      <a href="{{ page.url | relative_url }}" rel="bookmark">{{ page.title }}</a>
+    </h2>
+
+    {% include post/post-metas.html %}
+
+    {% if page.tags %}
+    <div class="list-tags">
+      {%-for tag in page.tags -%}
+      {%- assign tag_url = '/tags#' -%}
+      <a href="{{ site.url }}/{{ tag | slugify | prepend: tag_url }}" class="tag" rel="tag">{{tag | truncatewords:3 }}</a>
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+
+  </div><!-- .list-li__content-->
+
+</li>

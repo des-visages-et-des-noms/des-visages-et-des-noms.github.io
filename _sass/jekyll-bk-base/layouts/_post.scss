@@ -1,0 +1,113 @@
+//
+// Jekyll-bk-base - LAYOUTS POST
+//
+.post {
+    padding-top: 5rem;
+    overflow-x: hidden;
+    @include breakpoint(max_xm) {
+        padding-top: 4rem;
+    }
+        @include breakpoint(max_xs) {
+        padding-top: 3rem;
+    }
+    &-header {
+        position: relative;
+        margin-bottom: 3rem;
+        @include breakpoint(max_xm) {
+            margin-bottom: 2rem;
+        }
+        .post-title {
+            margin: 0px;
+        }
+        .post-metas {
+            font-size: smaller;
+            margin-top: 2rem;
+            opacity: 0.5;
+            @include breakpoint(max_xm) {
+                margin-top: 1.5rem;
+            }
+            @include breakpoint(max_xs) {
+                margin-top: 10px;
+            }
+        }
+        a.navigation{
+            position: absolute;
+            font-size: 60px;
+            line-height: 80px;
+            left: -50px;
+        }
+    }
+    &-thumbnail {
+        margin-bottom: 3rem;
+    }
+    &-content {
+        text-align: justify;
+        h2 {
+            margin: 2.5rem 0px;
+            text-align: left;
+            @include breakpoint(max_xs) {
+                margin: 2rem 0px;
+            }
+        }
+        h3,
+        h4 {
+            margin: 1.5rem 0px;
+            text-align: left;
+            @include breakpoint(max_xs) {
+                margin: 1rem 0px;
+            }
+        }
+    }
+    &-footer {
+        margin-top: 5rem;
+        padding-bottom: 5rem;
+        .post-tags {
+            margin-bottom: 2.5rem;
+        }
+        .post-partage {
+            @include flexBox(row, flex-end, center);
+            a.icone {
+                margin-left: 10px;
+            }
+            @include breakpoint(max_xs) {
+               font-size: smaller;
+               a.icone {
+                margin-left: 5px;
+            }
+            }
+        }
+    }
+
+    &-navigation {
+        @include flexBox(row, space-between, center);
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        border-top: 1.5px solid $color-border;
+        @include breakpoint(max_xm) {
+            padding-top: 3.5rem;
+            padding-bottom: 3.5rem;
+        }
+        @include breakpoint(max_xs) {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        .nav {
+            &-label {
+                line-height: 2;
+                opacity: 0.5;
+            }
+            &.next .nav-label{
+                text-align: right;
+                @include breakpoint(max_xs) {
+                    margin-top: 20px;
+                    text-align: left;
+                }
+            }
+            a {
+                font-size: larger;
+                @include font-weight(600);
+            }
+
+        }
+    }
+}

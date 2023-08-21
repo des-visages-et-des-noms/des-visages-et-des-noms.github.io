@@ -1,0 +1,19 @@
+//
+// Jekyll-bk-base - PAGE CONTACT
+//
+.form-page-contact {
+    margin-top: 3.5rem;
+    .form-field {
+        position: relative;
+        width: 100%;
+        input[type="text"] {
+            width: 100%;
+            box-sizing: content-box;
+        }
+        label {
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        margin-bottom: 2rem;
+    }
+}

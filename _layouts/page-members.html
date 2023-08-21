@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<article class="page">
+
+    <header class="page-header">
+        <div class="page-header__c max--xm-p">
+            <h1 class="page-title">{{ page.title }}</h1>
+        </div>
+    </header>
+
+    <div class="page-content max--xm-p">
+        {{ content }}
+    </div>
+
+    <footer class="page-footer max--xm-p">
+
+        {%- assign famille = page.categories -%}
+        {%- assign members = site.members | where_exp:"item", "item.famille == famille" -%}
+
+        <ul class="list-content-members">
+            {%- for member in members -%}
+            <li class="list-li-member">
+                <h2 id="{{ member.title | slugify }}" class="member-title"
+                    data-title="{{ member.title | split: ' ' | first | truncate: 2, '' }}">
+                    {{ member.title }}
+                </h2>
+                {{ member.content }}
+            </li>
+            {%- endfor -%}
+        </ul>
+
+    </footer>
+
+</article>
+
+{%- include collection/familles-navigation.html -%}

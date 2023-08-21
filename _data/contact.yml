@@ -1,0 +1,24 @@
+email: contact@bertrand-kaernel.fr
+phone: 
+adresses:
+  - name: Main
+    rue: 
+    cp: 
+    ville: 
+    departement: adresse - mon département
+    region: 
+    pays: France
+    department: 
+socials:
+  - name: Twitter
+    link: 
+    image: twitter.svg
+  - name: Mastodon
+    link: 
+    image: mastodon.svg
+  - name: Github
+    link: 
+    image: github.svg
+  - name: Codepen
+    link: 
+    image: codepen.svg

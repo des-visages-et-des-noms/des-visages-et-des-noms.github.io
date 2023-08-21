@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<article class="page">
+    <div class="page__c">
+
+        <header class="page-header">
+            <div class="page-header__c max--xxm-p">
+                {%- if page.title -%}<h1 class="page-title">{{ page.title }}</h1>{%- endif -%}
+            </div>
+        </header>
+
+        <section class="page-content">
+            <div class="max--xm-p">
+                {{ content }}
+            </div>
+
+            <ul class="list-content-familles max--xxm-p">
+
+                {%- for famille in site.familles limit:7 -%}
+                {%- include collection/familles-li.html -%}
+                {%- endfor -%}
+                <li class="list-li toutes-les-familles">
+                    <h2 class="list-li__title">
+                        <a href="/les-familles.html" rel="bookmark">
+                            {{ "Toutes les familles" }}
+                        </a>
+                    </h2>
+                </li>
+            
+            </ul>
+
+            <div class="list-header max--xxm-p">
+                <h2 class="h1">Derniers articles</h2>
+            </div>
+
+            <ul class="list-content max--xxm-p">
+                {% for page in site.posts offset:0 limit:3 %}
+                {% include list/list-content.html %}
+                {% endfor %}
+
+            </ul>
+        </section>
+
+    </div>
+</article>

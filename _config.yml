@@ -1,0 +1,120 @@
+# Welcome to Jekyll!
+#
+# MENU - SITE CONFIGURATION 
+# 1. Jekyll settings
+# 2. Files from Jekyll builds
+# 3. Plugins - Installed Gems
+# 4. Gem settings
+# 5. Site settings
+# 6. Collections 
+# 7. Jekyll collections settings 
+# 7. Site favicons & manifest icons
+
+###
+
+# 1. Jekyll settings
+
+# 2. Files from Jekyll builds
+exclude:
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+  - screenshot.png
+  - LICENSE
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - jekyll-bk-base.gemspec
+  - .jekyll-cache
+  - .editorconfig
+  - node_modules/
+  - vendor/bundle/
+  - .bundle
+  - config.ru
+  - makefile
+  - rakefile
+
+include:
+  - _pages
+  - _categories
+  - _familles
+  - .htaccess
+
+# 3. Plugins - Installed Gems
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+
+# 4. Gem settings
+sass:
+  sass_dir: _sass
+  style: compressed
+
+imagemagick:
+  enabled: true
+  widths:
+    - 1280
+    - 768
+    - 425
+  input_directories:
+    - assets/images
+  input_formats:
+    - ".png"
+    - ".tiff"
+    - ".jpeg"
+    - ".jpg"
+  output_formats:
+    jpg: "-quality 75% -define jpeg:dct-method=float -strip -interlace Plane"
+    #webp: "-quality 100%"
+## --------------------------------------  
+## ---------------------- JEKYLL SEO TAGS
+social:
+  name: Des visages & des noms
+  links:
+    - https://twitter.com/xxx
+    - https://github.com/xxx
+logo: "/docs/assets/favicons/android-chrome-192x192.png"
+
+# 5. Site settings
+locale: "fr-FR"
+title: Des visages et des noms
+email: mail@bertrand-kaernel.fr
+description: >- # this means to ignore newlines until "baseurl:"
+  La rafle du 10 Janvier 1944 en Gironde
+
+baseurl: "" # | relative_url ••• (l'url relative)
+url: "https://des-visages-et-des-noms.github.io" # | absolute_url ••• (l'url complète)
+destination: docs/
+
+markdown: kramdown
+highlighter: rouge
+
+# 6. Collections 
+collections_dir: mes_collections # Changement du dossier par défaut (_collections)
+collections:
+  familles:
+    output: false
+    permalink: /:name
+  members:
+    output: true
+    permalink: /:name
+
+# 7. Jekyll collections settings
+defaults:
+  - scope:
+      path: "" # une chaîne vide signifie ici tous les fichiers du projet
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /:categories/:title.html
+  - scope:
+      path: ""
+      type: category
+    values:
+      layout: categorie
+
+# 8. Site favicons & manifest icons

@@ -1,0 +1,37 @@
+{% comment %}
+{% include elements/galerie.html name='galerie_001' columns='2' ratio='11' %}
+{% endcomment %}
+
+{% assign galerie = page[include.name] %}
+
+
+<ul class="galerie-ul galerie-col-{{ include.columns }}" data-ratio="{{ include.ratio }}" >
+
+    {% for item in galerie %}
+
+    {% assign image_url = {{item.image | remove: ".jpg" | remove: ".jpeg" | remove: ".tiff" | remove: ".png" }} %}
+    {% assign image_url = image_url | prepend: "/assets/images/" %}
+    {% capture columns %} {{ include.columns | to_integer }} {% endcapture %}
+
+    <li class="galerie-li image-{{ forloop.index }} col-{{ include.columns }}" >
+
+        <picture>
+            <a data-fslightbox="gallery" href="{{image_url}}-1280.jpg">
+                {% if include.columns == '1' %}
+                <figure class="col-1" style="background-image: url('{{image_url}}-1280.jpg');">
+                </figure>
+                {% elsif include.columns == '2' %}
+                <figure class="col-1" style="background-image: url('{{image_url}}-768.jpg');">
+                </figure>
+                {% else %}
+                <figure class="col-1" style="background-image: url('{{image_url}}-425.jpg');">
+                </figure>
+                {% endif %}
+            </a>
+            <figcaption>{{item.alt}}</figcaption>
+        </picture>
+
+    </li>
+
+    {% endfor %}
+</ul>

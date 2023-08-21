@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " fr" }}">
+
+{%- include head.html -%}
+
+<body class="{{ page.title | slugify }}" itemscope itemtype="http://schema.org/WebPage">
+  <div class="body__c">
+
+    {%- include header.html -%}
+
+    <main class="site-main" aria-label="Content">
+      <div class="site-main__c">
+
+        {{ content }}
+
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+  </div>
+
+  <script src="{{ 'assets/js/bk-main.js' | relative_url }}"></script>
+
+  {% if page.layout != 'categories' %}
+  <script src="{{ '/assets/js/fslightbox.js' | relative_url }}" async></script>
+  {% endif %}
+
+  <!-- Include the script that allows Netlify CMS login -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  {% if page.url contains 'recherche' %}
+  <script src="{{ '/assets/js/simple-jekyll-search.js' | relative_url }}"></script>
+  <script>
+    SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('list-results'),
+      json: '/search.json',
+      searchResultTemplate: '<li class="list-li"><h2 class="list-li__title"><a href="{url}">{title}</a></h2></li>',
+      noResultsText: ("Aucun résultat pour votre recherche!"),
+    });
+  </script>
+  {% endif %}
+
+  {% if page.layout == 'categorie' or page.layout == 'home' %}
+  <script>
+    bk_data_time();
+  </script>
+  {% endif %}
+
+</body>
+
+</html>

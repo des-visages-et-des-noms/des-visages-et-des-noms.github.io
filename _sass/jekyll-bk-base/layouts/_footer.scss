@@ -1,0 +1,158 @@
+.site-footer {
+    position: relative;
+    background-color: $color-primaire;
+    padding-top: 3.5rem;
+    @include breakpoint(max_xm) {
+        padding-top: 2rem;
+    }
+    @include breakpoint(max_xm) {
+        padding-top: 1.5rem;
+    }
+    &-bckgd {
+        position: absolute;
+        z-index: 0;
+        left: 0px;
+        width: 100%;
+        @include aspect_ratio(100, 4.8);
+        bottom: 99.5%;
+        background-image: url("/assets/ressources/background-raffle-footer.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: rotate(0deg);
+    }
+
+    .footer-main {
+        background: transparent;
+
+        .footer-header {
+            @include flexBox(row, space-between, center);
+            padding-bottom: 2rem;
+            padding-top: 1rem;
+            border-bottom: 1.5px solid $color-secondaire__light;
+            margin-bottom: 2rem;
+
+            .site-id {
+                color: $color-secondaire__light;
+                .site-title {
+                    display: inline-flex;
+                    text-transform: uppercase;
+                    font-size: 4rem;
+                    margin-bottom: 10px;
+                    color: inherit;
+                    @include font-weight(400);
+                    font-stretch: 75%;
+                    font-optical-sizing: auto;
+                    &:hover {
+                        color: $color-hover;
+                    }
+                    @include breakpoint(max_md) {
+                        font-size: 2.5rem;
+                    }
+                    @include breakpoint(max_xs) {
+                        font-size: 1.95rem;
+                        margin-bottom: 0px;
+                    }
+                }
+                .site-description{
+                    @include breakpoint(max_xs) {
+                        margin-top: 10px; 
+                        font-size: smaller;
+                    }
+                }
+            }
+            .footer-cnrd {
+                font-size: smaller;
+                color: $color-secondaire__light;
+                @include flexBox(row, flex-end, center);
+                a {
+                    width: 50px;
+                    margin-left: 15px;
+                }
+                @include breakpoint(max_xs) {
+                    flex: 0 1 100%;
+                    margin-top: 20px;
+                    a {
+                        width: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .footer-navigation-soutiens {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        place-content: center;
+        padding-top: 2rem;
+        @include breakpoint(max_md) {
+            grid-template-columns: 1fr;
+        }
+        .footer-navigation {
+            .menu {
+                .menu-link {
+                    font-size: large;
+                    @include font-weight(500);
+                    line-height: 1.8;
+                    color: $color-secondaire__light;
+                }
+            }
+        }
+        .footer-soutiens {
+            margin: 0px;
+            @include flexBox(row, flex-end, center);
+            font-size: smaller;
+            color: $color-secondaire__light;
+            &__c {
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+                @include flexBox(row, flex-end, center);
+                li {
+                    position: relative;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    margin-left: 20px;
+                    max-height: 75px;
+                    img {
+                        width: auto;
+                        height: 75px;
+                    }
+                    @include breakpoint(max_md) {
+                        img {
+                            height: 55px;
+                        }
+                        max-height: 55px;
+                    }
+                }
+                @include breakpoint(max_xs) {
+                    @include flexBox(row, center, center);
+                    .footer-soutiens__mention{
+                        flex: 0 1 100%;
+                        margin-bottom: 20px;
+                        text-align: center;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .footer-infos {
+        background: $color-dark;
+        color: $color-light;
+        margin-top: 3rem;
+        &__c {
+            @include flexBox(row, flex-end, center);
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            @include breakpoint(max_xm) {
+                font-size: smaller;
+            }
+            @include breakpoint(max_md) {
+                font-size: small;
+            }
+            @include breakpoint(max_xs) {
+                font-size: x-small;
+            }
+        }
+    }
+}

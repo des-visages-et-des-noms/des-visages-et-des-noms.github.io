@@ -1,0 +1,12 @@
+{% assign target_cat = page.categories %}
+{% assign cat_arr = site.categories[target_cat] | sort: 'date' %}
+
+<ul class="list-content">
+
+    {% for page in cat_arr reversed %}
+
+    {% include list/list-content.html %}
+
+    {% endfor %}
+
+</ul>

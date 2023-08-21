@@ -1,0 +1,25 @@
+---
+main:
+  - title: Accueil
+    url: /
+  - title: A propos
+    url: /a-propos
+  - title: Le projet
+    url: /le-projet
+  - title: La rafle
+    url: /la-rafle
+  - title: Les familles
+    url: /les-familles
+  - title: Contact
+    url: /contact
+footer:
+  - title: Accueil
+    url: /
+  - title: Admin
+    url: /admin/
+  - title: Tous les Tags
+    url: /tags
+  - title: Recherche
+    url: /recherche
+  - title: Mentions légales
+    url: /mentions-legales
