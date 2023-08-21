@@ -32,12 +32,12 @@ exclude:
   - config.ru
   - makefile
   - rakefile
+  - .htaccess
 
 include:
   - _pages
   - _categories
   - _familles
-  - .htaccess
 
 # 3. Plugins - Installed Gems
 plugins:
