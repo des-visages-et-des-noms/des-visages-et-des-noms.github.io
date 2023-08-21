@@ -82,7 +82,7 @@ email: mail@bertrand-kaernel.fr
 description: >- # this means to ignore newlines until "baseurl:"
   La rafle du 10 Janvier 1944 en Gironde
 
-baseurl: # | relative_url ••• (l'url relative)
+baseurl: "/" # | relative_url ••• (l'url relative)
 url: "https://des-visages-et-des-noms.github.io" # | absolute_url ••• (l'url complète)
 destination: docs/
 
