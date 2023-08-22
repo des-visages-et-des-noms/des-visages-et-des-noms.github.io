@@ -26,7 +26,7 @@
                     {%- assign cat_active = item.cat_active -%}
                     <li
                         class="menu-link {% if page.url == item.url or page.url contains cat_active %} active {% endif %}">
-                        <a class="light" href="{{ site.baseurl }}{{ item.url }}" itemprop="url">
+                        <a class="light" href="{{ item.url | relative_url }}" itemprop="url">
                             <span itemprop="name">{{ item.title }}</span>
                         </a>
                     </li>
