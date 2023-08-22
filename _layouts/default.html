@@ -22,7 +22,7 @@
 
   <script src="{{ 'assets/js/bk-main.js' | relative_url }}"></script>
 
-  {% if page.layout != 'categories' %}
+  {% if page.layout != 'list' %}
   <script src="{{ '/assets/js/fslightbox.js' | relative_url }}" async></script>
   {% endif %}
 
@@ -39,12 +39,6 @@
       searchResultTemplate: '<li class="list-li"><h2 class="list-li__title"><a href="{url}">{title}</a></h2></li>',
       noResultsText: ("Aucun résultat pour votre recherche!"),
     });
-  </script>
-  {% endif %}
-
-  {% if page.layout == 'categorie' or page.layout == 'home' %}
-  <script>
-    bk_data_time();
   </script>
   {% endif %}
 
