@@ -2,25 +2,25 @@ footer-soutiens:
   - name: "Fondation pour la mémoire de la Shoah"
     link: "http://www.fondationshoah.org/"
     image: "/assets/images/logo-FMS-425.jpg"
-    width: 425
-    height: 425
+    width: 75
+    height: 75
     alt: "Logo Fondation pour la mémoire de la Shoah"
   - name: "Région Nouvelle Aquitaine"
     link: "https://www.nouvelle-aquitaine.fr/"
     image: "/assets/images/logo-NA-425.jpg"
-    width: 425
-    height: 461
+    width: 69
+    height: 75
     alt: "Logo Nouvelle Aquitaine"
   - name: "Lycée Léonard de Vinci"
     link: "https://www.lyceevinciblanquefort.fr/"
     image: "/assets/images/logo-lycee-LDV-425.jpg"
-    width: 425
-    height: 225
+    width: 141
+    height: 75
     alt: "Logo Lycée Léonard de Vinci"
 footer-cnrd:
   - name: "Concours national de la Résistance et de la Déportation"
     link: "https://eduscol.education.fr/3541/presentation-du-concours-national-de-la-resistance-et-de-la-deportation"
     image: "/assets/images/logo-CNRD.png"
-    width: 700
-    height: 828
+    width: 50
+    height: 59
     alt: "Logo CNRD"
