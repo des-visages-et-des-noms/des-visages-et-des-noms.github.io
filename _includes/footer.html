@@ -14,7 +14,7 @@
           <div class="footer-cnrd__mention">{{ "Participant CNRD 2019 : " }}</div>
           {% for li in site.data.config.footer-cnrd %}
           <a href="{{ li.link }}">
-            <img src="{{ li.image }}" alt="{{ li.name }}">
+            <img src="{{ li.image }}" alt="{{ li.name }}" width="{{ li.width }}" height="{{ li.height }}" alt="{{ li.alt }}">
           </a>
           {% endfor %}
         </div>
@@ -43,7 +43,7 @@
             {% for li in site.data.config.footer-soutiens %}
             <li>
               <a href="{{ li.link }}">
-                <img src="{{ li.image }}" alt="{{ li.name }}">
+                <img src="{{ li.image }}" alt="{{ li.name }}" width="{{ li.width }}" height="{{ li.height }}" alt="{{ li.alt }}">
               </a>
             </li>
             {% endfor %}
