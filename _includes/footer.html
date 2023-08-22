@@ -28,7 +28,7 @@
             {% for item in site.data.navigation.footer %}
             {%- if item.title -%}
             <li class="menu-link">
-              <a class="light" href="{{ item.url| relative_url }}" itemprop="url">
+              <a class="light" href="{{ item.url | relative_url }}" itemprop="url">
                 <span itemprop="name">{{ item.title | escape }}</span>
               </a>
             </li>
