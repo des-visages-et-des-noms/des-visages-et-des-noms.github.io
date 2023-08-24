@@ -6,11 +6,10 @@ h4 {
     font-style: normal;
     line-height: 1.2;
     color: $color-font-title;
-    @include font-weight(700);
     &:first-letter{
         text-transform: uppercase;
     }
-    font-variation-settings: "wght" 100;
+    @include font-weight(700);
     font-stretch: 77%;
     font-optical-sizing: auto;
 }
