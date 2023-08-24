@@ -87,276 +87,140 @@ $bricolage-s-path: "../fonts/bricolage-s/";
 }
 
 @font-face {
-    font-family: "BricolageGrotesque-12pt";
+    font-family: "BricolageGrotesqueSemiCond";
     src:
-        url($bricolage-s-path + "BricolageGrotesque12pt-ExtraBold.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque12pt-ExtraBold.ttf") format("truetype");
+        url($bricolage-s-path + "BricolageGrotesque_SemiCondensed-ExtraBold.woff2") format("woff2"),
+        url($bricolage-s-path + "BricolageGrotesque_SemiCondensed-ExtraBold.ttf") format("truetype");
     font-weight: 800;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "BricolageGrotesque-12pt";
+    font-family: "BricolageGrotesqueSemiCond";
     src:
-        url($bricolage-s-path + "BricolageGrotesque12pt-Bold.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque12pt-Bold.ttf") format("truetype");
+        url($bricolage-s-path + "BricolageGrotesque_SemiCondensed-Bold.woff2") format("woff2"),
+        url($bricolage-s-path + "BricolageGrotesque_SemiCondensed-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "BricolageGrotesque-12pt";
+    font-family: "BricolageGrotesqueSemiCond";
     src:
-        url($bricolage-s-path + "BricolageGrotesque12pt-SemiBold.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque12pt-SemiBold.ttf") format("truetype");
+        url($bricolage-s-path + "BricolageGrotesque_SemiCondensed-SemiBold.woff2") format("woff2"),
+        url($bricolage-s-path + "BricolageGrotesque_SemiCondensed-SemiBold.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "BricolageGrotesque-12pt";
+    font-family: "BricolageGrotesqueSemiCond";
     src:
-        url($bricolage-s-path + "BricolageGrotesque12pt-Medium.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque12pt-Medium.ttf") format("truetype");
+        url($bricolage-s-path + "BricolageGrotesque_SemiCondensed-Medium.woff2") format("woff2"),
+        url($bricolage-s-path + "BricolageGrotesque_SemiCondensed-Medium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "BricolageGrotesque-12pt";
+    font-family: "BricolageGrotesqueSemiCond";
     src:
-        url($bricolage-s-path + "BricolageGrotesque12pt-Regular.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque12pt-Regular.ttf") format("truetype");
+        url($bricolage-s-path + "BricolageGrotesque_SemiCondensed-Regular.woff2") format("woff2"),
+        url($bricolage-s-path + "BricolageGrotesque_SemiCondensed-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "BricolageGrotesque-12pt";
+    font-family: "BricolageGrotesqueSemiCond";
     src:
-        url($bricolage-s-path + "BricolageGrotesque12pt-Light.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque12pt-Light.ttf") format("truetype");
+        url($bricolage-s-path + "BricolageGrotesque_SemiCondensed-Light.woff2") format("woff2"),
+        url($bricolage-s-path + "BricolageGrotesque_SemiCondensed-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "BricolageGrotesque-12pt";
+    font-family: "BricolageGrotesqueSemiCond";
     src:
-        url($bricolage-s-path + "BricolageGrotesque12pt-ExtraLight.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque12pt-ExtraLight.ttf") format("truetype");
+        url($bricolage-s-path + "BricolageGrotesque_SemiCondensed-ExtraLight.woff2") format("woff2"),
+        url($bricolage-s-path + "BricolageGrotesque_SemiCondensed-ExtraLight.ttf") format("truetype");
     font-weight: 200;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "BricolageGrotesque-12pt-Condensed";
+    font-family: "BricolageGrotesqueCond";
     src:
-        url($bricolage-s-path + "BricolageGrotesque12ptCondensed-ExtraBold.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque12ptCondensed-ExtraBold.ttf") format("truetype");
+        url($bricolage-s-path + "BricolageGrotesque_Condensed-ExtraBold.woff2") format("woff2"),
+        url($bricolage-s-path + "BricolageGrotesque_Condensed-ExtraBold.ttf") format("truetype");
     font-weight: 800;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "BricolageGrotesque-12pt-Condensed";
+    font-family: "BricolageGrotesqueCond";
     src:
-        url($bricolage-s-path + "BricolageGrotesque12ptCondensed-Bold.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque12ptCondensed-Bold.ttf") format("truetype");
+        url($bricolage-s-path + "BricolageGrotesque_Condensed-Bold.woff2") format("woff2"),
+        url($bricolage-s-path + "BricolageGrotesque_Condensed-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "BricolageGrotesque-12pt-Condensed";
+    font-family: "BricolageGrotesqueCond";
     src:
-        url($bricolage-s-path + "BricolageGrotesque12ptCondensed-SemiBold.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque12ptCondensed-SemiBold.ttf") format("truetype");
+        url($bricolage-s-path + "BricolageGrotesque_Condensed-SemiBold.woff2") format("woff2"),
+        url($bricolage-s-path + "BricolageGrotesque_Condensed-SemiBold.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "BricolageGrotesque-12pt-Condensed";
+    font-family: "BricolageGrotesqueCond";
     src:
-        url($bricolage-s-path + "BricolageGrotesque12ptCondensed-Medium.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque12ptCondensed-Medium.ttf") format("truetype");
+        url($bricolage-s-path + "BricolageGrotesque_Condensed-Medium.woff2") format("woff2"),
+        url($bricolage-s-path + "BricolageGrotesque_Condensed-Medium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "BricolageGrotesque-12pt-Condensed";
+    font-family: "BricolageGrotesqueCond";
     src:
-        url($bricolage-s-path + "BricolageGrotesque12ptCondensed-Regular.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque12ptCondensed-Regular.ttf") format("truetype");
+        url($bricolage-s-path + "BricolageGrotesque_Condensed-Regular.woff2") format("woff2"),
+        url($bricolage-s-path + "BricolageGrotesque_Condensed-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "BricolageGrotesque-12pt-Condensed";
+    font-family: "BricolageGrotesqueCond";
     src:
-        url($bricolage-s-path + "BricolageGrotesque12ptCondensed-Light.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque12ptCondensed-Light.ttf") format("truetype");
+        url($bricolage-s-path + "BricolageGrotesque_Condensed-Light.woff2") format("woff2"),
+        url($bricolage-s-path + "BricolageGrotesque_Condensed-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "BricolageGrotesque-12pt-Condensed";
+    font-family: "BricolageGrotesqueCond";
     src:
-        url($bricolage-s-path + "BricolageGrotesque12ptCondensed-ExtraLight.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque12ptCondensed-ExtraLight.ttf") format("truetype");
-    font-weight: 200;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "BricolageGrotesque-96pt";
-    src:
-        url($bricolage-s-path + "BricolageGrotesque96pt-ExtraBold.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque96pt-ExtraBold.ttf") format("truetype");
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "BricolageGrotesque-96pt";
-    src:
-        url($bricolage-s-path + "BricolageGrotesque96pt-Bold.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque96pt-Bold.ttf") format("truetype");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "BricolageGrotesque-96pt";
-    src:
-        url($bricolage-s-path + "BricolageGrotesque96pt-SemiBold.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque96pt-SemiBold.ttf") format("truetype");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "BricolageGrotesque-96pt";
-    src:
-        url($bricolage-s-path + "BricolageGrotesque96pt-Medium.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque96pt-Medium.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "BricolageGrotesque-96pt";
-    src:
-        url($bricolage-s-path + "BricolageGrotesque96pt-Regular.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque96pt-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "BricolageGrotesque-96pt";
-    src:
-        url($bricolage-s-path + "BricolageGrotesque96pt-ExtraLight.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque96pt-ExtraLight.ttf") format("truetype");
-    font-weight: 200;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "BricolageGrotesque-96pt";
-    src:
-        url($bricolage-s-path + "BricolageGrotesque96pt-Light.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque96pt-Light.ttf") format("truetype");
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-
-@font-face {
-    font-family: "BricolageGrotesque-96pt-Condensed";
-    src:
-        url($bricolage-s-path + "BricolageGrotesque96ptCondensed-ExtraBold.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque96ptCondensed-ExtraBold.ttf") format("truetype");
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "BricolageGrotesque-96pt-Condensed";
-    src:
-        url($bricolage-s-path + "BricolageGrotesque96ptCondensed-Bold.woff2") format("woff2"),
-        url($bricolage-s-path + "BricolageGrotesque96ptCondensed-Bold.ttf") format("truetype");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'BricolageGrotesque-96pt-Condensed';
-    src: url($bricolage-s-path + "BricolageGrotesque96ptCondensed-SemiBold.woff2") format('woff2'),
-        url($bricolage-s-path + "BricolageGrotesque96ptCondensed-SemiBold.ttf") format('truetype');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'BricolageGrotesque-96pt-Condensed';
-    src: url($bricolage-s-path + "BricolageGrotesque96ptCondensed-Medium.woff2") format('woff2'),
-        url($bricolage-s-path + "BricolageGrotesque96ptCondensed-Medium.ttf") format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'BricolageGrotesque-96pt-Condensed';
-    src: url($bricolage-s-path + "BricolageGrotesque96ptCondensed-Regular.woff2") format('woff2'),
-        url($bricolage-s-path + "BricolageGrotesque96ptCondensed-Regular.ttf") format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'BricolageGrotesque-96pt-Condensed';
-    src: url($bricolage-s-path + "BricolageGrotesque96ptCondensed-Light.woff2") format('woff2'),
-        url($bricolage-s-path + "BricolageGrotesque96ptCondensed-Light.ttf") format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'BricolageGrotesque-96pt-Condensed';
-    src: url($bricolage-s-path + "BricolageGrotesque96ptCondensed-ExtraLight.woff2") format('woff2'),
-        url($bricolage-s-path + "BricolageGrotesque96ptCondensed-ExtraLight.ttf") format('truetype');
+        url($bricolage-s-path + "BricolageGrotesque_Condensed-ExtraLight.woff2") format("woff2"),
+        url($bricolage-s-path + "BricolageGrotesque_Condensed-ExtraLight.ttf") format("truetype");
     font-weight: 200;
     font-style: normal;
     font-display: swap;
