@@ -34,14 +34,13 @@
             .site-id {
                 color: $color-secondaire__light;
                 .site-title {
+                    font-family: $font-title-a;
                     display: inline-flex;
                     text-transform: uppercase;
                     font-size: 4rem;
                     margin-bottom: 10px;
                     color: inherit;
                     @include font-weight(400);
-                    font-stretch: 75%;
-                    font-optical-sizing: auto;
                     &:hover {
                         color: $color-hover;
                     }
@@ -51,6 +50,13 @@
                     @include breakpoint(max_xs) {
                         font-size: 1.95rem;
                         margin-bottom: 0px;
+                    }
+                    @supports (font-variation-settings: normal) {
+                        font-stretch: 75%;
+                        font-optical-sizing: auto;
+                    }
+                    @supports not (font-variation-settings: normal) {
+                        letter-spacing: -2px;
                     }
                 }
                 .site-description{

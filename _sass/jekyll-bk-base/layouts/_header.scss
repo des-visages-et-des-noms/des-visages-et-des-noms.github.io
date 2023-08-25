@@ -34,23 +34,34 @@
     &-top {
         .site-title {
             display: block;
+            font-family: $font-title-a;
             color: $color-secondaire__light;
             text-transform: uppercase;
-            @include font-weight(300);
-            font-stretch: 75%;
-            font-optical-sizing: auto;
             line-height: 1;
+            @include font-weight(300);
             svg {
                 fill: $color-secondaire__light;
                 text {
-                    font-size: 7.73em;
                     line-height: 1;
+                    @supports (font-variation-settings: normal) {
+                        font-size: 7.73em;
+                    }
+                    @supports not (font-variation-settings: normal) {
+                        font-size: 6.5em;
+                    }
                 }
             }
             &:hover {
                 svg {
                     fill: $color-hover;
                 }
+            }
+            @supports (font-variation-settings: normal) {
+                font-stretch: 75%;
+                font-optical-sizing: auto;
+            }
+            @supports not (font-variation-settings: normal) {
+                letter-spacing: -6px;
             }
         }
         .site-description {
@@ -59,7 +70,7 @@
             text-align: left;
             margin-top: 1rem;
             @include breakpoint(max_xs) {
-                margin-top: 10px; 
+                margin-top: 10px;
                 font-size: smaller;
             }
         }

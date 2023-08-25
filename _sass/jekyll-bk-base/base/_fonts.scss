@@ -1,7 +1,7 @@
 $bricolage-v-path: "../fonts/bricolage-v/";
 $bricolage-s-path: "../fonts/bricolage-s/";
 
-@supports (font-variation-settings: inherit) {
+@supports (font-variation-settings: normal) {
     @font-face {
         font-family: "Bricolage-v";
         src:
